@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 01</title>
+</head>
+<body>
+    <!--isso é um comentário-->
+    <!---->
+    <p>Olá Aluno</p>
+    <frameset cols="25%,*,25%">
+        <frame src="framea.html">
+        <frame src="frameb.html">
+        <frame src="framec.html">
+    </frameset>
+
+    <table border="1" style="width: 100%; height: auto;">
+        <tr>
+            <td>produto</td>
+            <img src="tv 32.jpg" alt="tv" style="height: 150px; width: 150px;"> <img src="tv 32.jpg" alt="tv" style="height: 150px; width: 150px;">
+            <td>valor</td>
+            <td>quantidade</td>
+        </tr>
+        <tr>
+            <td>Notebook </td>
+            <td>R$ 3.000,00</td>
+            <td>100</td>
+        </tr>
+     
+        <tr>
+            <td>Celular</td>
+            <td>R$ 1.000,00</td>
+            <td>100</td>
+        </tr>
+
+    </table>
+   
+       
+            
+    <form action="">
+        nome: <input type="text" name="nome"> <br>
+        sobrenome: <input type="text" name="sobre nome">
+        <input type="radio" name="sexo" value="masculino">homem <br>
+        <input type="radio" name="sexo" value="feminino">mulher
+        <br>
+        <input type="checkbox" name = value="eletronico" = "tv">eu tenho uma TV <br>
+        <input type="checkbox" name = value="eletronico" = "computador"> eu tenho um computador.
+    </form>
+
+    <form name="input" action="demo_form_acao.php" method="GET">
+        nome: <input type="text" name="user"> <br>
+        <input type="submit" value="enviar">
+    </form>
+    <br>
+    <br>
+    <p id="demo">clieque no botão para receber sua lcalização em latitude e logitude</p>
+
+    <script>
+        var x = document.getElementById("demo");
+        {
+            if(navigator.geolocation)
+        {
+            navigator.geolocation.getCurrentPosition(showposition);
+        }
+        else{x.innerHTML="O seu navegador não suporta navegação";}
+        }
+        function showposition(position)
+        {
+            x.innerHTML="latitude:" + position.coords.latitude +
+            "<br> longitude: " + position.coords.longitude;
+
+        }        
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>
